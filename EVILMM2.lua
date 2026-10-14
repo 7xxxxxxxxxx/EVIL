@@ -1,3 +1,424 @@
---[[ Obfuscated with Free Luau Minifier ]]--
-local _0x1=game:GetService("Players")local _0x2=game:GetService("RunService")local _0x3=game:GetService("UserInputService")local _0x4=_0x1.LocalPlayer;local _0x5=_0x4:FindFirstChildOfClass("PlayerGui")or _0x4:WaitForChild("PlayerGui",5)if gethui then _0x5=gethui()elseif game:GetService("CoreGui")then pcall(function()_0x5=game:GetService("CoreGui")end)end;if _0x5:FindFirstChild("EvilScriptsMainGUI")then _0x5.EvilScriptsMainGUI:Destroy()end;local _0x6=Instance.new("ScreenGui")_0x6.Name="EvilScriptsMainGUI"_0x6.ResetOnSpawn=false;_0x6.Parent=_0x5;local _0x7=false;local _0x8=false;local _0x9=false;local _0xa=false;local _0xb=false;local _0xc=50;local _0xd=120;local _0xe=16;local _0xf=50;local _0x10={Murderer=Color3.fromRGB(255,35,35),Sheriff=Color3.fromRGB(35,120,255),Hero=Color3.fromRGB(255,215,0),Innocent=Color3.fromRGB(35,255,100)}local _0x11={}local _0x12=Instance.new("Frame",_0x6)_0x12.Name="KeySystemFrame"_0x12.Size=UDim2.new(0,320,0,180)_0x12.Position=UDim2.new(0.5,-160,0.5,-90)_0x12.BackgroundColor3=Color3.fromRGB(15,15,22)_0x12.Active=true;_0x12.Draggable=true;Instance.new("UICorner",_0x12).CornerRadius=UDim.new(0,12)local _0x13=Instance.new("UIStroke",_0x12)_0x13.Thickness=2.5;_0x13.Color=Color3.fromRGB(180,0,255)local _0x14=Instance.new("TextLabel",_0x12)_0x14.Size=UDim2.new(1,0,0,40)_0x14.BackgroundTransparency=1;_0x14.Text="EVIL SCRIPTS - KEY SYSTEM"_0x14.TextColor3=Color3.fromRGB(220,40,255)_0x14.TextSize=15;_0x14.Font=Enum.Font.FredokaOne;local _0x15=Instance.new("TextBox",_0x12)_0x15.Size=UDim2.new(0.8,0,0,38)_0x15.Position=UDim2.new(0.1,0,0.35,0)_0x15.BackgroundColor3=Color3.fromRGB(25,25,35)_0x15.PlaceholderText="Ingresa la Key..."_0x15.Text=""_0x15.TextColor3=Color3.fromRGB(255,255,255)_0x15.TextSize=13;_0x15.Font=Enum.Font.Gotham;Instance.new("UICorner",_0x15).CornerRadius=UDim.new(0,6)local _0x16=Instance.new("TextButton",_0x12)_0x16.Size=UDim2.new(0.8,0,0,38)_0x16.Position=UDim2.new(0.1,0,0.65,0)_0x16.BackgroundColor3=Color3.fromRGB(140,0,220)_0x16.Text="VERIFICAR KEY"_0x16.TextColor3=Color3.fromRGB(255,255,255)_0x16.TextSize=13;_0x16.Font=Enum.Font.GothamBold;Instance.new("UICorner",_0x16).CornerRadius=UDim.new(0,6)local _0x17=Instance.new("Frame",_0x6)_0x17.Name="MainFrame"_0x17.Size=UDim2.new(0,520,0,320)_0x17.Position=UDim2.new(0.2,0,0.2,0)_0x17.BackgroundColor3=Color3.fromRGB(15,15,22)_0x17.BorderSizePixel=0;_0x17.ClipsDescendants=true;_0x17.Active=true;_0x17.Draggable=true;_0x17.Visible=false;Instance.new("UICorner",_0x17).CornerRadius=UDim.new(0,10)local _0x18=Instance.new("UIStroke",_0x17)_0x18.Thickness=2;_0x18.Color=Color3.fromRGB(180,0,255)local _0x19=Instance.new("Frame",_0x17)_0x19.Size=UDim2.new(1,0,0,36)_0x19.BackgroundColor3=Color3.fromRGB(20,20,28)_0x19.BorderSizePixel=0;Instance.new("UICorner",_0x19).CornerRadius=UDim.new(0,10)local _0x1a=Instance.new("TextLabel",_0x19)_0x1a.Size=UDim2.new(0,200,1,0)_0x1a.Position=UDim2.new(0,15,0,0)_0x1a.BackgroundTransparency=1;_0x1a.Text="EVIL SCRIPTS"_0x1a.TextColor3=Color3.fromRGB(220,40,255)_0x1a.TextSize=14;_0x1a.Font=Enum.Font.FredokaOne;_0x1a.TextXAlignment=Enum.TextXAlignment.Left;local _0x1b=Instance.new("TextButton",_0x19)_0x1b.Size=UDim2.new(0,30,0,30)_0x1b.Position=UDim2.new(1,-35,0.5,-15)_0x1b.BackgroundColor3=Color3.fromRGB(35,20,40)_0x1b.Text="-"_0x1b.TextColor3=Color3.fromRGB(255,255,255)_0x1b.TextSize=16;_0x1b.Font=Enum.Font.SourceSansBold;Instance.new("UICorner",_0x1b).CornerRadius=UDim.new(0,6)local _0x1c=Instance.new("Frame",_0x17)_0x1c.Size=UDim2.new(0,130,1,-36)_0x1c.Position=UDim2.new(0,0,0,36)_0x1c.BackgroundColor3=Color3.fromRGB(12,12,18)_0x1c.BorderSizePixel=0;local _0x1d=Instance.new("TextLabel",_0x1c)_0x1d.Size=UDim2.new(1,-16,0,20)_0x1d.Position=UDim2.new(0,12,0,8)_0x1d.BackgroundTransparency=1;_0x1d.Text="MENÚ"_0x1d.TextColor3=Color3.fromRGB(120,100,140)_0x1d.TextSize=9;_0x1d.Font=Enum.Font.GothamBold;_0x1d.TextXAlignment=Enum.TextXAlignment.Left;local _0x1e=Instance.new("Frame",_0x17)_0x1e.Size=UDim2.new(1,-130,1,-36)_0x1e.Position=UDim2.new(0,130,0,36)_0x1e.BackgroundTransparency=1;local _0x1f=Instance.new("TextLabel",_0x1e)_0x1f.Size=UDim2.new(1,-20,0,25)_0x1f.Position=UDim2.new(0,15,0,10)_0x1f.BackgroundTransparency=1;_0x1f.Text="MM2 Roles & ESP"_0x1f.TextColor3=Color3.fromRGB(255,255,255)_0x1f.TextSize=15;_0x1f.Font=Enum.Font.GothamBold;_0x1f.TextXAlignment=Enum.TextXAlignment.Left;local _0x20={}local function _0x21(_0x22)local _0x23=Instance.new("ScrollingFrame",_0x1e)_0x23.Name=_0x22.."Frame"_0x23.Size=UDim2.new(1,0,1,-35)_0x23.Position=UDim2.new(0,0,0,35)_0x23.BackgroundTransparency=1;_0x23.BorderSizePixel=0;_0x23.CanvasSize=UDim2.new(0,0,0,280)_0x23.ScrollBarThickness=3;_0x23.ScrollBarImageColor3=Color3.fromRGB(180,0,255)_0x23.Visible=false;_0x20[_0x22]=_0x23;return _0x23 end;local function _0x24(_0x25,_0x22,_0x26,_0x27,_0x28)local _0x29=Instance.new("TextButton",_0x25)_0x29.Size=UDim2.new(0,160,0,28)_0x29.Position=UDim2.new(0,_0x26,0,_0x27)_0x29.BackgroundColor3=Color3.fromRGB(30,25,40)_0x29.TextColor3=Color3.fromRGB(200,200,200)_0x29.TextSize=10;_0x29.Font=Enum.Font.GothamBold;_0x29.Text=_0x22..": OFF"Instance.new("UICorner",_0x29).CornerRadius=UDim.new(0,6)local _0x2a=false;_0x29.MouseButton1Click:Connect(function()_0x2a=not _0x2a;_0x29.Text=_0x22..": "..(_0x2a and "ON" or "OFF")_0x29.BackgroundColor3=_0x2a and Color3.fromRGB(140,0,220) or Color3.fromRGB(30,25,40)_0x29.TextColor3=_0x2a and Color3.fromRGB(255,255,255) or Color3.fromRGB(200,200,200)_0x28(_0x2a)end)return _0x29 end;local _0x2b=_0x21("MM2 Roles")_0x2b.Visible=true;local _0x2c=Instance.new("Frame",_0x2b)_0x2c.Size=UDim2.new(1,-30,0,100)_0x2c.Position=UDim2.new(0,15,0,10)_0x2c.BackgroundTransparency=1;_0x24(_0x2c,"ESP Roles (Murder/Sheriff)",0,0,function(_0x2d)_0x7=_0x2d;if not _0x2d then for _0x2e,_0x2f in pairs(_0x11)do if _0x2f then _0x2f:Destroy()end end;_0x11={}end end)local _0x30=_0x21("Movimiento")local _0x31=Instance.new("Frame",_0x30)_0x31.Size=UDim2.new(1,-30,0,220)_0x31.Position=UDim2.new(0,15,0,10)_0x31.BackgroundTransparency=1;_0x24(_0x31,"Super Velocidad (Speed)",0,0,function(_0x2d)_0x8=_0x2d end)_0x24(_0x31,"Super Salto (High Jump)",0,35,function(_0x2d)_0x9=_0x2d end)_0x24(_0x31,"Noclip (Atravesar Paredes)",0,70,function(_0x2d)_0xa=_0x2d end)_0x24(_0x31,"Salto Infinito",0,105,function(_0x2d)_0xb=_0x2d end)local _0x32={{Name="MM2 Roles",Icon="🎯",Active=true},{Name="Movimiento",Icon="🏃"}}local _0x33={}for _0x34,_0x35 in ipairs(_0x32)do local _0x36=Instance.new("TextButton",_0x1c)_0x36.Size=UDim2.new(1,-16,0,26)_0x36.Position=UDim2.new(0,8,0,28+(_0x34-1)*30)_0x36.BackgroundColor3=_0x35.Active and Color3.fromRGB(35,20,45) or Color3.fromRGB(0,0,0)_0x36.BackgroundTransparency=_0x35.Active and 0 or 1;_0x36.Text="  ".._0x35.Icon.."  ".._0x35.Name;_0x36.TextColor3=_0x35.Active and Color3.fromRGB(255,255,255) or Color3.fromRGB(150,150,160)_0x36.TextSize=10;_0x36.Font=Enum.Font.GothamSemibold;_0x36.TextXAlignment=Enum.TextXAlignment.Left;Instance.new("UICorner",_0x36).CornerRadius=UDim.new(0,6)local _0x37=Instance.new("Frame",_0x36)_0x37.Size=UDim2.new(0,3,0,14)_0x37.Position=UDim2.new(0,0,0.5,-7)_0x37.BackgroundColor3=Color3.fromRGB(180,0,255)_0x37.BorderSizePixel=0;_0x37.Visible=_0x35.Active;Instance.new("UICorner",_0x37).CornerRadius=UDim.new(1,0)_0x33[_0x34]={Btn=_0x36,Ind=_0x37,Name=_0x35.Name}_0x36.MouseButton1Click:Connect(function()for _0x2e,_0x38 in ipairs(_0x33)do _0x38.Btn.BackgroundColor3=Color3.fromRGB(0,0,0)_0x38.Btn.BackgroundTransparency=1;_0x38.Btn.TextColor3=Color3.fromRGB(150,150,160)_0x38.Ind.Visible=false end;_0x36.BackgroundColor3=Color3.fromRGB(35,20,45)_0x36.BackgroundTransparency=0;_0x36.TextColor3=Color3.fromRGB(255,255,255)_0x37.Visible=true;_0x1f.Text=_0x35.Name;for _0x2e,_0x23 in pairs(_0x20)do _0x23.Visible=false end;if _0x20[_0x35.Name]then _0x20[_0x35.Name].Visible=true end end)end;local _0x39=Instance.new("TextButton",_0x6)_0x39.Size=UDim2.new(0,50,0,50)_0x39.Position=UDim2.new(0.05,0,0.2,0)_0x39.BackgroundColor3=Color3.fromRGB(15,15,22)_0x39.TextColor3=Color3.fromRGB(220,40,255)_0x39.Text="EVIL"_0x39.TextSize=13;_0x39.Font=Enum.Font.FredokaOne;_0x39.Active=true;_0x39.Draggable=true;_0x39.Visible=false;local _0x3a=Instance.new("UIStroke",_0x39)_0x3a.Color=Color3.fromRGB(180,0,255)_0x3a.Thickness=2;_0x1b.MouseButton1Click:Connect(function()_0x17.Visible=false;_0x39.Visible=true end)_0x39.MouseButton1Click:Connect(function()_0x39.Visible=false;_0x17.Visible=true end)_0x16.MouseButton1Click:Connect(function()if _0x15.Text=="EVILMM2"then _0x16.Text="¡KEY CORRECTA!"_0x16.BackgroundColor3=Color3.fromRGB(0,200,100)task.wait(0.8)_0x12:Destroy()_0x17.Visible=true else _0x16.Text="KEY INCORRECTA!"_0x16.BackgroundColor3=Color3.fromRGB(200,40,40)task.wait(1.2)_0x16.Text="VERIFICAR KEY"_0x16.BackgroundColor3=Color3.fromRGB(140,0,220)end end)local function _0x3b(_0x3c)if not _0x3c or not _0x3c.Character then return "Innocent"end;local _0x3d=_0x3c:FindFirstChild("Backpack")local _0x3e=_0x3c.Character;if _0x3d and _0x3d:FindFirstChild("Knife")or _0x3e:FindFirstChild("Knife")then return "Murderer"end;if _0x3d and (_0x3d:FindFirstChild("Gun")or _0x3d:FindFirstChild("Revolver"))or _0x3e and (_0x3e:FindFirstChild("Gun")or _0x3e:FindFirstChild("Revolver"))then return "Sheriff"end;return "Innocent"end;_0x2.Heartbeat:Connect(function()if _0x4.Character and _0x4.Character:FindFirstChildOfClass("Humanoid")then local _0x3f=_0x4.Character.Humanoid;if _0x8 then _0x3f.WalkSpeed=_0xc else _0x3f.WalkSpeed=_0xe end;if _0x9 then _0x3f.JumpPower=_0xd else _0x3f.JumpPower=_0xf end end;if _0xa and _0x4.Character then for _0x2e,_0x40 in pairs(_0x4.Character:GetDescendants())do if _0x40:IsA("BasePart")and _0x40.CanCollide then _0x40.CanCollide=false end end end;if _0x7 then for _0x2e,_0x41 in pairs(_0x1:GetPlayers())do if _0x41~=_0x4 and _0x41.Character and _0x41.Character:FindFirstChild("HumanoidRootPart")then local _0x42=_0x3b(_0x41)if _0x42~="Innocent"then if not _0x11[_0x41.Name]then local _0x43=Instance.new("Highlight")_0x43.Name=
-_0x41.Name;_0x43.FillColor=_0x10[_0x42]_0x43.OutlineColor=Color3.new(1,1,1)_0x43.FillTransparency=0.4;_0x43.Parent=_0x41.Character;_0x11[_0x41.Name]=_0x43 end else if _0x11[_0x41.Name]then _0x11[_0x41.Name]:Destroy()_0x11[_0x41.Name]=nil end end end end end end)_0x3.JumpRequest:Connect(function()if _0xb and _0x4.Character and _0x4.Character:FindFirstChildOfClass("Humanoid")then _0x4.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)end end)
+-- ========================================================
+-- Evil Scripts Hub | Clean Movement & MM2 ESP Edition
+-- ========================================================
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local LocalPlayer = Players.LocalPlayer
+
+-- Contenedor GUI seguro
+local parentGui = LocalPlayer:FindFirstChildOfClass("PlayerGui") or LocalPlayer:WaitForChild("PlayerGui", 5)
+if gethui then
+	parentGui = gethui()
+elseif game:GetService("CoreGui") then
+	pcall(function() parentGui = game:GetService("CoreGui") end)
+end
+
+-- Limpiar previa interfaz
+if parentGui:FindFirstChild("EvilScriptsMainGUI") then
+	parentGui.EvilScriptsMainGUI:Destroy()
+end
+
+-- ScreenGui Principal
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "EvilScriptsMainGUI"
+ScreenGui.ResetOnSpawn = false
+ScreenGui.Parent = parentGui
+
+-- ESTADOS Y VARIABLES GLOBALES
+local espEnabled = false
+local speedHack = false
+local highJump = false
+local noclipEnabled = false
+local infJumpEnabled = false
+
+local customSpeed = 50
+local customJump = 120
+local defaultWalkSpeed = 16
+local defaultJumpPower = 50
+
+local ROLE_COLORS = {
+	Murderer = Color3.fromRGB(255, 35, 35),
+	Sheriff  = Color3.fromRGB(35, 120, 255),
+	Hero     = Color3.fromRGB(255, 215, 0),
+	Innocent = Color3.fromRGB(35, 255, 100)
+}
+local espHighlights = {}
+
+-- ========================================================
+-- 1. PANTALLA DE KEY SYSTEM
+-- ========================================================
+
+local KeySystemFrame = Instance.new("Frame", ScreenGui)
+KeySystemFrame.Name = "KeySystemFrame"
+KeySystemFrame.Size = UDim2.new(0, 320, 0, 180)
+KeySystemFrame.Position = UDim2.new(0.5, -160, 0.5, -90)
+KeySystemFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 22)
+KeySystemFrame.Active = true
+KeySystemFrame.Draggable = true
+
+Instance.new("UICorner", KeySystemFrame).CornerRadius = UDim.new(0, 12)
+local ksStroke = Instance.new("UIStroke", KeySystemFrame)
+ksStroke.Thickness = 2.5
+ksStroke.Color = Color3.fromRGB(180, 0, 255)
+
+local ksTitle = Instance.new("TextLabel", KeySystemFrame)
+ksTitle.Size = UDim2.new(1, 0, 0, 40)
+ksTitle.BackgroundTransparency = 1
+ksTitle.Text = "EVIL SCRIPTS - KEY SYSTEM"
+ksTitle.TextColor3 = Color3.fromRGB(220, 40, 255)
+ksTitle.TextSize = 15
+ksTitle.Font = Enum.Font.FredokaOne
+
+local ksBox = Instance.new("TextBox", KeySystemFrame)
+ksBox.Size = UDim2.new(0.8, 0, 0, 38)
+ksBox.Position = UDim2.new(0.1, 0, 0.35, 0)
+ksBox.BackgroundColor3 = Color3.fromRGB(25, 25, 35)
+ksBox.PlaceholderText = "Ingresa la Key..."
+ksBox.Text = ""
+ksBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+ksBox.TextSize = 13
+ksBox.Font = Enum.Font.Gotham
+Instance.new("UICorner", ksBox).CornerRadius = UDim.new(0, 6)
+
+local ksButton = Instance.new("TextButton", KeySystemFrame)
+ksButton.Size = UDim2.new(0.8, 0, 0, 38)
+ksButton.Position = UDim2.new(0.1, 0, 0.65, 0)
+ksButton.BackgroundColor3 = Color3.fromRGB(140, 0, 220)
+ksButton.Text = "VERIFICAR KEY"
+ksButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ksButton.TextSize = 13
+ksButton.Font = Enum.Font.GothamBold
+Instance.new("UICorner", ksButton).CornerRadius = UDim.new(0, 6)
+
+-- ========================================================
+-- 2. PANEL PRINCIPAL
+-- ========================================================
+
+local MainFrame = Instance.new("Frame", ScreenGui)
+MainFrame.Name = "MainFrame"
+MainFrame.Size = UDim2.new(0, 520, 0, 320)
+MainFrame.Position = UDim2.new(0.2, 0, 0.2, 0)
+MainFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 22)
+MainFrame.BorderSizePixel = 0
+MainFrame.ClipsDescendants = true
+MainFrame.Active = true
+MainFrame.Draggable = true
+MainFrame.Visible = false
+
+Instance.new("UICorner", MainFrame).CornerRadius = UDim.new(0, 10)
+local MainStroke = Instance.new("UIStroke", MainFrame)
+MainStroke.Thickness = 2
+MainStroke.Color = Color3.fromRGB(180, 0, 255)
+
+-- Barra Superior
+local TopBar = Instance.new("Frame", MainFrame)
+TopBar.Size = UDim2.new(1, 0, 0, 36)
+TopBar.BackgroundColor3 = Color3.fromRGB(20, 20, 28)
+TopBar.BorderSizePixel = 0
+Instance.new("UICorner", TopBar).CornerRadius = UDim.new(0, 10)
+
+local TopTitle = Instance.new("TextLabel", TopBar)
+TopTitle.Size = UDim2.new(0, 200, 1, 0)
+TopTitle.Position = UDim2.new(0, 15, 0, 0)
+TopTitle.BackgroundTransparency = 1
+TopTitle.Text = "EVIL SCRIPTS"
+TopTitle.TextColor3 = Color3.fromRGB(220, 40, 255)
+TopTitle.TextSize = 14
+TopTitle.Font = Enum.Font.FredokaOne
+TopTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+local MinimizeBtn = Instance.new("TextButton", TopBar)
+MinimizeBtn.Size = UDim2.new(0, 30, 0, 30)
+MinimizeBtn.Position = UDim2.new(1, -35, 0.5, -15)
+MinimizeBtn.BackgroundColor3 = Color3.fromRGB(35, 20, 40)
+MinimizeBtn.Text = "-"
+MinimizeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+MinimizeBtn.TextSize = 16
+MinimizeBtn.Font = Enum.Font.SourceSansBold
+Instance.new("UICorner", MinimizeBtn).CornerRadius = UDim.new(0, 6)
+
+-- Sidebar Lateral
+local Sidebar = Instance.new("Frame", MainFrame)
+Sidebar.Size = UDim2.new(0, 130, 1, -36)
+Sidebar.Position = UDim2.new(0, 0, 0, 36)
+Sidebar.BackgroundColor3 = Color3.fromRGB(12, 12, 18)
+Sidebar.BorderSizePixel = 0
+
+local CategoryHeader = Instance.new("TextLabel", Sidebar)
+CategoryHeader.Size = UDim2.new(1, -16, 0, 20)
+CategoryHeader.Position = UDim2.new(0, 12, 0, 8)
+CategoryHeader.BackgroundTransparency = 1
+CategoryHeader.Text = "MENÚ"
+CategoryHeader.TextColor3 = Color3.fromRGB(120, 100, 140)
+CategoryHeader.TextSize = 9
+CategoryHeader.Font = Enum.Font.GothamBold
+CategoryHeader.TextXAlignment = Enum.TextXAlignment.Left
+
+-- Área de Contenido
+local ContentArea = Instance.new("Frame", MainFrame)
+ContentArea.Size = UDim2.new(1, -130, 1, -36)
+ContentArea.Position = UDim2.new(0, 130, 0, 36)
+ContentArea.BackgroundTransparency = 1
+
+local ContentTitle = Instance.new("TextLabel", ContentArea)
+ContentTitle.Size = UDim2.new(1, -20, 0, 25)
+ContentTitle.Position = UDim2.new(0, 15, 0, 10)
+ContentTitle.BackgroundTransparency = 1
+ContentTitle.Text = "MM2 Roles & ESP"
+ContentTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+ContentTitle.TextSize = 15
+ContentTitle.Font = Enum.Font.GothamBold
+ContentTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+local TabFrames = {}
+local function createTabContainer(name)
+	local frame = Instance.new("ScrollingFrame", ContentArea)
+	frame.Name = name .. "Frame"
+	frame.Size = UDim2.new(1, 0, 1, -35)
+	frame.Position = UDim2.new(0, 0, 0, 35)
+	frame.BackgroundTransparency = 1
+	frame.BorderSizePixel = 0
+	frame.CanvasSize = UDim2.new(0, 0, 0, 280)
+	frame.ScrollBarThickness = 3
+	frame.ScrollBarImageColor3 = Color3.fromRGB(180, 0, 255)
+	frame.Visible = false
+	TabFrames[name] = frame
+	return frame
+end
+
+local function createToggleBtnInParent(parent, name, posX, posY, callback)
+	local btn = Instance.new("TextButton", parent)
+	btn.Size = UDim2.new(0, 160, 0, 28)
+	btn.Position = UDim2.new(0, posX, 0, posY)
+	btn.BackgroundColor3 = Color3.fromRGB(30, 25, 40)
+	btn.TextColor3 = Color3.fromRGB(200, 200, 200)
+	btn.TextSize = 10
+	btn.Font = Enum.Font.GothamBold
+	btn.Text = name .. ": OFF"
+	Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 6)
+
+	local state = false
+	btn.MouseButton1Click:Connect(function()
+		state = not state
+		btn.Text = name .. ": " .. (state and "ON" or "OFF")
+		btn.BackgroundColor3 = state and Color3.fromRGB(140, 0, 220) or Color3.fromRGB(30, 25, 40)
+		btn.TextColor3 = state and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(200, 200, 200)
+		callback(state)
+	end)
+	return btn
+end
+
+-- Pestaña 1: MM2 Roles
+local fMM2 = createTabContainer("MM2 Roles")
+fMM2.Visible = true
+local qMM2 = Instance.new("Frame", fMM2)
+qMM2.Size = UDim2.new(1, -30, 0, 100)
+qMM2.Position = UDim2.new(0, 15, 0, 10)
+qMM2.BackgroundTransparency = 1
+
+createToggleBtnInParent(qMM2, "ESP Roles (Murder/Sheriff)", 0, 0, function(st)
+	espEnabled = st
+	if not st then
+		for _, h in pairs(espHighlights) do if h then h:Destroy() end end
+		espHighlights = {}
+	end
+end)
+
+-- Pestaña 2: Movimiento
+local fMovimiento = createTabContainer("Movimiento")
+local qMovimiento = Instance.new("Frame", fMovimiento)
+qMovimiento.Size = UDim2.new(1, -30, 0, 220)
+qMovimiento.Position = UDim2.new(0, 15, 0, 10)
+qMovimiento.BackgroundTransparency = 1
+
+createToggleBtnInParent(qMovimiento, "Super Velocidad (Speed)", 0, 0, function(st) 
+	speedHack = st 
+	if not st and LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Humanoid") then
+		LocalPlayer.Character.Humanoid.WalkSpeed = defaultWalkSpeed
+	end
+end)
+
+createToggleBtnInParent(qMovimiento, "Super Salto (High Jump)", 0, 35, function(st) 
+	highJump = st 
+	if not st and LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Humanoid") then
+		LocalPlayer.Character.Humanoid.JumpPower = defaultJumpPower
+	end
+end)
+
+createToggleBtnInParent(qMovimiento, "Noclip (Atravesar Paredes)", 0, 70, function(st) noclipEnabled = st end)
+createToggleBtnInParent(qMovimiento, "Salto Infinito", 0, 105, function(st) infJumpEnabled = st end)
+
+-- Navegación Lateral (Solo MM2 Roles y Movimiento)
+local tabs = {
+	{Name = "MM2 Roles", Icon = "🎯", Active = true},
+	{Name = "Movimiento", Icon = "🏃"}
+}
+
+local tabButtons = {}
+for i, tab in ipairs(tabs) do
+	local TabBtn = Instance.new("TextButton", Sidebar)
+	TabBtn.Size = UDim2.new(1, -16, 0, 26)
+	TabBtn.Position = UDim2.new(0, 8, 0, 28 + (i - 1) * 30)
+	TabBtn.BackgroundColor3 = tab.Active and Color3.fromRGB(35, 20, 45) or Color3.fromRGB(0, 0, 0)
+	TabBtn.BackgroundTransparency = tab.Active and 0 or 1
+	TabBtn.Text = "  " .. tab.Icon .. "  " .. tab.Name
+	TabBtn.TextColor3 = tab.Active and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(150, 150, 160)
+	TabBtn.TextSize = 10
+	TabBtn.Font = Enum.Font.GothamSemibold
+	TabBtn.TextXAlignment = Enum.TextXAlignment.Left
+	Instance.new("UICorner", TabBtn).CornerRadius = UDim.new(0, 6)
+
+	local Indicator = Instance.new("Frame", TabBtn)
+	Indicator.Size = UDim2.new(0, 3, 0, 14)
+	Indicator.Position = UDim2.new(0, 0, 0.5, -7)
+	Indicator.BackgroundColor3 = Color3.fromRGB(180, 0, 255)
+	Indicator.BorderSizePixel = 0
+	Indicator.Visible = tab.Active
+	Instance.new("UICorner", Indicator).CornerRadius = UDim.new(1, 0)
+
+	tabButtons[i] = {Btn = TabBtn, Ind = Indicator, Name = tab.Name}
+
+	TabBtn.MouseButton1Click:Connect(function()
+		for _, tb in ipairs(tabButtons) do
+			tb.Btn.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+			tb.Btn.BackgroundTransparency = 1
+			tb.Btn.TextColor3 = Color3.fromRGB(150, 150, 160)
+			tb.Ind.Visible = false
+		end
+		TabBtn.BackgroundColor3 = Color3.fromRGB(35, 20, 45)
+		TabBtn.BackgroundTransparency = 0
+		TabBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Indicator.Visible = true
+		ContentTitle.Text = tab.Name
+
+		for _, frame in pairs(TabFrames) do frame.Visible = false end
+		if TabFrames[tab.Name] then TabFrames[tab.Name].Visible = true end
+	end)
+end
+
+-- Botón Flotante Minimizado
+local MinimizedCircle = Instance.new("TextButton", ScreenGui)
+MinimizedCircle.Size = UDim2.new(0, 50, 0, 50)
+MinimizedCircle.Position = UDim2.new(0.05, 0, 0.2, 0)
+MinimizedCircle.BackgroundColor3 = Color3.fromRGB(15, 15, 22)
+MinimizedCircle.TextColor3 = Color3.fromRGB(220, 40, 255)
+MinimizedCircle.Text = "EVIL"
+MinimizedCircle.TextSize = 13
+MinimizedCircle.Font = Enum.Font.FredokaOne
+MinimizedCircle.Active = true
+MinimizedCircle.Draggable = true
+MinimizedCircle.Visible = false
+Instance.new("UICorner", MinimizedCircle).CornerRadius = UDim.new(1, 0)
+
+local UIStrokeCircle = Instance.new("UIStroke", MinimizedCircle)
+UIStrokeCircle.Color = Color3.fromRGB(180, 0, 255)
+UIStrokeCircle.Thickness = 2
+
+MinimizeBtn.MouseButton1Click:Connect(function()
+	MainFrame.Visible = false
+	MinimizedCircle.Visible = true
+end)
+
+MinimizedCircle.MouseButton1Click:Connect(function()
+	MinimizedCircle.Visible = false
+	MainFrame.Visible = true
+end)
+
+-- ==========================================================
+-- LÓGICA DEL KEY SYSTEM
+-- ==========================================================
+
+ksButton.MouseButton1Click:Connect(function()
+	if ksBox.Text == "EVILMM2" then
+		ksButton.Text = "¡KEY CORRECTA!"
+		ksButton.BackgroundColor3 = Color3.fromRGB(0, 200, 100)
+		task.wait(0.8)
+		KeySystemFrame:Destroy()
+		MainFrame.Visible = true
+	else
+		ksButton.Text = "KEY INCORRECTA!"
+		ksButton.BackgroundColor3 = Color3.fromRGB(200, 40, 40)
+		task.wait(1.2)
+		ksButton.Text = "VERIFICAR KEY"
+		ksButton.BackgroundColor3 = Color3.fromRGB(140, 0, 220)
+	end
+end)
+
+-- ==========================================================
+-- BUCLES Y FUNCIONALIDADES EN TIEMPO REAL
+-- ==========================================================
+
+local function getPlayerRole(player)
+	if not player or not player.Character then return "Innocent" end
+	local bp = player:FindFirstChild("Backpack")
+	local char = player.Character
+	if (bp and bp:FindFirstChild("Knife")) or char:FindFirstChild("Knife") then return "Murderer"
+	elseif (bp and bp:FindFirstChild("Gun")) or char:FindFirstChild("Gun") then return "Sheriff" end
+	return "Innocent"
+end
+
+-- Bucle constante de físicas (Speed, High Jump, Noclip)
+RunService.Stepped:Connect(function()
+	if not MainFrame.Visible and not MinimizedCircle.Visible then return end
+
+	local char = LocalPlayer.Character
+	if char then
+		local hum = char:FindFirstChildOfClass("Humanoid")
+		
+		-- Forzar Velocidad
+		if speedHack and hum then
+			hum.WalkSpeed = customSpeed
+		end
+
+		-- Forzar Salto Alto
+		if highJump and hum then
+			hum.UseJumpPower = true
+			hum.JumpPower = customJump
+		end
+
+		-- Modo Noclip
+		if noclipEnabled then
+			for _, part in pairs(char:GetDescendants()) do
+				if part:IsA("BasePart") and part.CanCollide == true then
+					part.CanCollide = false
+				end
+			end
+		end
+	end
+end)
+
+-- Bucle de renderizado para ESP
+RunService.RenderStepped:Connect(function()
+	if not MainFrame.Visible and not MinimizedCircle.Visible then return end
+
+	if espEnabled then
+		for _, p in pairs(Players:GetPlayers()) do
+			if p.Character and p.Character:FindFirstChild("HumanoidRootPart") then
+				local role = getPlayerRole(p)
+				local col = ROLE_COLORS[role] or ROLE_COLORS.Innocent
+				if p == LocalPlayer then col = Color3.fromRGB(255, 255, 255) end
+				
+				local hl = espHighlights[p]
+				if not hl or not hl.Parent then
+					hl = Instance.new("Highlight")
+					hl.Name = "EvilESP"
+					hl.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+					hl.FillTransparency = 0.5
+					hl.Parent = p.Character
+					espHighlights[p] = hl
+				end
+				hl.FillColor = col
+				hl.OutlineColor = col
+			end
+		end
+	end
+end)
+
+-- Evento de Salto Infinito
+UserInputService.JumpRequest:Connect(function()
+	if infJumpEnabled and LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Humanoid") then
+		LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+	end
+end)
