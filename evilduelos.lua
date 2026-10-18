@@ -108,6 +108,117 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -- Servicios necesarios
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -117,7 +228,7 @@ local LocalPlayer = Players.LocalPlayer
 
 -- Variables de configuración
 local hitboxEnabled = false
-local hitboxSize = 5 -- Tamaño por defecto
+local hitboxSize = 1 -- Tamaño por defecto (mínimo 1, máximo 4)
 
 -- Crear la ScreenGui principal
 local ScreenGui = Instance.new("ScreenGui")
@@ -133,7 +244,7 @@ MainFrame.Position = UDim2.new(0.5, -130, 0.5, -90)
 MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 MainFrame.BorderSizePixel = 0
 MainFrame.Active = true
-MainFrame.Draggable = true -- Permite mover el panel
+MainFrame.Draggable = true
 MainFrame.Parent = ScreenGui
 
 local UICornerMain = Instance.new("UICorner")
@@ -176,7 +287,7 @@ MinimizeButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 MinimizeButton.Text = "🔴"
 MinimizeButton.TextSize = 20
 MinimizeButton.Active = true
-MinimizeButton.Draggable = true -- La bolita se puede mover
+MinimizeButton.Draggable = true
 MinimizeButton.Visible = false
 MinimizeButton.Parent = ScreenGui
 
@@ -199,19 +310,18 @@ local UICornerToggle = Instance.new("UICorner")
 UICornerToggle.CornerRadius = UDim.new(0, 6)
 UICornerToggle.Parent = ToggleButton
 
--- 4. SLIDER DE TAMAÑO
+-- 4. SLIDER DE TAMAÑO (Rango 1 a 4)
 local SliderLabel = Instance.new("TextLabel")
 SliderLabel.Size = UDim2.new(1, -20, 0, 20)
 SliderLabel.Position = UDim2.new(0, 10, 0, 90)
 SliderLabel.BackgroundTransparency = 1
-SliderLabel.Text = "Tamaño: 5"
+SliderLabel.Text = "Tamaño: 1"
 SliderLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
 SliderLabel.TextSize = 12
 SliderLabel.Font = Enum.Font.SourceSans
 SliderLabel.TextXAlignment = Enum.TextXAlignment.Left
 SliderLabel.Parent = MainFrame
 
--- Botón invisible encima de la barra para capturar clics/toques de forma precisa
 local SliderButton = Instance.new("TextButton")
 SliderButton.Name = "SliderButton"
 SliderButton.Size = UDim2.new(1, -20, 0, 16)
@@ -232,7 +342,7 @@ UICornerBar.CornerRadius = UDim.new(1, 0)
 UICornerBar.Parent = SliderBar
 
 local SliderFill = Instance.new("Frame")
-SliderFill.Size = UDim2.new(5/20, 0, 1, 0) -- Escala 1 a 20
+SliderFill.Size = UDim2.new(0, 0, 1, 0) -- Inicia en 0% (Tamaño 1)
 SliderFill.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
 SliderFill.BorderSizePixel = 0
 SliderFill.Parent = SliderBar
@@ -241,7 +351,7 @@ local UICornerFill = Instance.new("UICorner")
 UICornerFill.CornerRadius = UDim.new(1, 0)
 UICornerFill.Parent = SliderFill
 
--- Lógica corregida para arrastrar el Slider
+-- Lógica para ajustar el Slider entre 1 y 4
 local draggingSlider = false
 
 local function updateSlider(input)
@@ -252,7 +362,8 @@ local function updateSlider(input)
 	local relativeX = math.clamp((mousePos - barPos) / barSize, 0, 1)
 	SliderFill.Size = UDim2.new(relativeX, 0, 1, 0)
 	
-	hitboxSize = math.floor(1 + (relativeX * 19)) -- Tamaño de 1 a 20
+	-- Escala exacta de 1 a 4
+	hitboxSize = math.floor(1 + (relativeX * 3))
 	SliderLabel.Text = "Tamaño: " .. tostring(hitboxSize)
 end
 
@@ -301,7 +412,7 @@ MinimizeButton.MouseButton1Click:Connect(function()
 	MinimizeButton.Visible = false
 end)
 
--- Bucle principal para expandir la hitbox de los enemigos
+-- Bucle principal para expandir la hitbox
 RunService.RenderStepped:Connect(function()
 	if not hitboxEnabled then return end
 	
